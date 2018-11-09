@@ -1,0 +1,98 @@
+page,.cart-main{height: 100%;}
+.cart-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #eee;
+}
+.cart-list {
+  flex: 1;
+  overflow-x: hidden;
+}
+.cart-list-item {
+  padding: 10px;
+  height: 100px;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #fff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.item-check {
+  padding: 0 5px;
+}
+.item-img {
+  width: 80px;
+  height: 80px;
+}
+.item-img image {
+  width: 100%;
+  height: 100%;
+}
+.item-content {
+  flex: 1;
+  padding: 5px 15px;
+  height: 80px;
+  position: relative;
+}
+.item-content-title {
+  font-size: 14px;
+  width: 160px;
+}
+.item-content-price {
+  margin-top: 30px;
+  font-size: 16px;
+  color: red;
+}
+.item-content-del {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  width: 20px;
+  height: 20px;
+  background: url(http://weixin.m.yiguo.com/Images/catimg/del.png) no-repeat;
+  background-size: 100%;
+}
+.item-content-num {
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.item-content-num text {
+  min-width: 25px;
+  min-height: 20px;
+  padding: 5px;
+  float: left;
+  text-align: center;
+}
+.item-content-num .count {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+.cart-all {
+  height: 40px;
+  background-color: #fff;
+  display: flex;
+}
+.cart-all-checkAll {
+  padding-left: 10px;
+  padding-top: 3px;
+}
+.cart-all-text {
+  flex: 1;
+  text-align: right;
+  padding-right: 10px;
+  line-height: 40px;
+}
+.cart-all-btn {
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 16px;
+  background-color: #ff6353;
+}

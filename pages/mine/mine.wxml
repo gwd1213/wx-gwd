@@ -1,0 +1,18 @@
+<view class='userInfo'>
+  <view class="userImg">
+    <open-data type="userAvatarUrl"></open-data>  
+  </view>
+  <view class="userName">
+    <open-data type="userNickName"></open-data>
+  </view>
+</view>
+<view class='my-map'>
+  <map
+    id="map" 
+    longitude="{{longitude}}" 
+    latitude="{{latitude}}" 
+    scale="14"  
+    markers="{{markers}}" 
+    show-location
+  ></map>
+</view>

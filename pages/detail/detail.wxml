@@ -1,0 +1,11 @@
+<view class="detail">
+  <view class="detail-content">
+    <view class="detail-content-img">
+      <image src="{{detail.src}}"></image>
+    </view>
+    <view class="detail-content-title">{{detail.title}}</view>
+    <view class="detail-content-price">￥{{detail.price}}</view>
+    <view class="detail-content-text">{{detail.text}}</view>
+  </view>
+  <view class="detail-btn" bindtap="handleAddClick">加入购物车</view>
+</view>

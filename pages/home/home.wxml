@@ -1,0 +1,55 @@
+<view class="slide-wrapper">
+  <swiper
+    
+    indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}"
+    interval="{{interval}}"
+    duration="{{duration}}"
+    circular="{{circular}}"
+  >
+    <block wx:for="{{imgUrls}}" wx:key="{{imgUrls}}" >
+      <swiper-item class="slide-inner">
+        <image src="{{item}}" class="slide-image" mode="widthFix"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class='menu'>
+  <navigator class='menu-item' wx:for="{{menuList}}" wx:key="{{item.id}}"
+    url="/pages/productList/productList?id={{item.id}}"
+  >
+    <image src='{{item.src}}'></image>
+    <text>{{item.text}}</text>
+  </navigator>
+</view>
+
+<view class="weui-tab">
+  <view class="home-navbar">
+      <block wx:for="{{tabs}}" wx:key="{{item.id}}">
+          <view 
+            id="{{item.id}}" 
+            class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" 
+            bindtap="tabClick"
+          >
+            <view class="weui-navbar__title">{{item.text}}</view>
+          </view>
+      </block>
+      <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px);"></view>
+  </view>
+  <view class="weui-content">
+      <navigator
+        class='list-item'
+        wx:for="{{navList}}"
+        wx:key="{{item.id}}"
+        url="/pages/detail/detail?id={{item.id}}"
+      >
+        <view class="item-img">
+          <image src="{{item.src}}"></image>
+        </view>
+        <view class="item-info">
+          <view class="title">{{item.title}}</view>
+          <view class="text">{{item.text}}</view>
+        </view>
+      </navigator>
+  </view>
+</view>
